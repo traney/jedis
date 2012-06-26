@@ -412,9 +412,9 @@ public class Pipeline extends Queable {
         return getResponse(BuilderFactory.STRING);
     }
 
-    public Response<String> lpop(byte[] key) {
+    public Response<byte[]> lpop(byte[] key) {
         client.lpop(key);
-        return getResponse(BuilderFactory.STRING);
+        return getResponse(BuilderFactory.BYTE_ARRAY);
     }
 
     public Response<Long> lpush(String key, String string) {
